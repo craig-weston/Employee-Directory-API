@@ -1,0 +1,20 @@
+* {
+ font-size: 12px;
+}
+
+
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+body {
+    background-color: #fcfcfc;
+}
+
+.card:hover, .card-body:focus {
+    transform: scale3d(1.006, 1.006, 1);
+	    background: aliceblue;
+}
+.card {
+    transition: transform .5s;
+}
