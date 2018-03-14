@@ -29,7 +29,7 @@ $(employees).each(function(i, employee) {
 				 <div class="col-xs-8 col-lg-7 float-right"> 
 					<h5 class="card-title mt-4">${employeeName}</h5>
 					<p class="card-text font-weight-light text-secondary mb-0">${employeeEmail}</p>
-					 <p class="card-text font-weight-light text-secondary">${employeeAlias}</p>
+					 <p class="card-text font-weight-light text-secondary">${employeeLocation}</p>
 				  </div>
 			  </div>
 			</div>
