@@ -54,6 +54,8 @@ $(employees).each(function(i, employee) {
 			  <p class="font-weight-light text-secondary">Birthday: ${employeeBirthday}</p>
 		  </div>
 		  <div class="modal-footer">
+		<button type="button" class="btn btn-default btn-prev">Prev</button>
+        <button type="button" class="btn btn-default btn-next">Next</button>
 			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 		  </div>
 		</div>
@@ -63,6 +65,25 @@ $(employees).each(function(i, employee) {
 `
 
 $("#directory").html(boxes);
+	
+$("div[id^='employee-modal']").each(function(){
+  
+  var currentModal = $(this);
+  
+  //click next
+  currentModal.find('.btn-next').click(function(){
+    currentModal.modal('hide');
+    currentModal.closest("div[id^='employee-modal']").nextAll("div[id^='employee-modal']").first().modal('show'); 
+  });
+  
+  //click prev
+  currentModal.find('.btn-prev').click(function(){
+    currentModal.modal('hide');
+    currentModal.closest("div[id^='employee-modal']").prevAll("div[id^='employee-modal']").first().modal('show'); 
+  });
+
+});
+
 	
 });
 	  
